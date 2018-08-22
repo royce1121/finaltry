@@ -11,6 +11,9 @@
 </form>
 {% else %}
 <form method="post" action="{% url 'check' %}" style="text-align:center;">
+   {% if form.errors %}
+              <p>Invalid email or password! Please try again.</p>
+    {% endif %}
   <label ><b>Sign up</b></label>
     {% csrf_token %}
   <div class="container">
