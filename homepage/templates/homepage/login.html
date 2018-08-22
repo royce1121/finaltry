@@ -2,25 +2,26 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<label ><b>Welcome {{ user.username }}</b></label>
-<form method="post" action="{% url 'logout_view' %}">
-  {% csrf_token %}
-<button type="submit">Logout</button>
+
+<form method="post" action="{% url 'logout_view' %}" style="text-align: center;" >
+   {% csrf_token %}
+  <label class="welcome"><b>Welcome <br><br>{{ user.username }}<br></b></label>
+  <br><br>
+<button class="btn1" type="submit">Logout</button>
 </form>
 {% else %}
-<form method="post" action="{% url 'check' %}">
+<form method="post" action="{% url 'check' %}" style="text-align:center;">
+  <label ><b>Sign up</b></label>
     {% csrf_token %}
   <div class="container">
-    <label ><b>Username</b></label>
     <input type="text" placeholder="Enter Username" id="user" name="user" required>
-
-    <label ><b>Password</b></label>
+    <br>
     <input type="password" placeholder="Enter Password" id="pass" name="pass" required>
-
-    <button type="submit">Login</button>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
+    <br>
+    <div style="text-align:center;">
+    <button class="btn1" type="submit">Login</button>
+    </div>
+    <br>
     <span class="psw">No Account Yet?<a href="{% url 'signup' %}">Create an account</a></span>
   </div>
 </form>

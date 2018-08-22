@@ -1,9 +1,14 @@
 
 /* Bordered form */
 form {
-    border: 5px solid #0000ff;
+    padding-top: 30px;
 }
-
+.welcome{
+    color: blue;
+    font-family: 'Lobster';
+    text-align: center;
+    font-size: 30px;
+}
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 50%;
@@ -12,17 +17,30 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
 /* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
+.btn1{
+        text-align: center;
+        width: 30%;
+        border-radius: 20px;
+        border: 2px solid #0066ff;
+}
+.btn1:hover {
+    background-color: blue;
     color: white;
+}
+button {
+    background-color: white; 
+
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 50%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 /* Add a hover effect for buttons */
@@ -37,6 +55,17 @@ button:hover {
     background-color: #f44336;
 }
 
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
 
 /* Add padding to containers */
 .container {
@@ -44,13 +73,10 @@ button:hover {
 }
 
 /* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-h1{
+.mid{
     color: blue;
     font-family: 'Lobster';
+    text-align: center;
 }
 
 /* Change styles for span and cancel button on extra small screens */
