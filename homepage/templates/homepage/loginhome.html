@@ -1,0 +1,12 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+    <p class="top-menu">Hello {{ user.username }} <small>(<a href="">Log out</a>)</small></p>
+    {% endif %}
+  	<div class="container">
+    <a href="{% url 'login' %}" class="top-menu"><button type="submit">Login</button></a>
+    <a href="{% url 'login' %}" class="top-menu"><button type="submit">Register</button></a>
+  	</div>
+
+{% endblock content %}

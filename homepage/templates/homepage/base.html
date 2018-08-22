@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <title>Login</title>
+    </head>
+    <body>
+    <div class="page-header">
+    <h1 class="mid"><a href="/">Exercise v2.0</a></h1>
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
